@@ -34,6 +34,10 @@ const notifications = [
 function App() {
   const [currentNotification, setCurrentNotification] = useState(0);
   const [showNotification, setShowNotification] = useState(true);
+  const [timeLeft, setTimeLeft] = useState({
+    minutes: 8,
+    seconds: 32
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,6 +49,24 @@ function App() {
     }, 4000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  // Contador regressivo
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 };
+        } else if (prev.minutes > 0) {
+          return { minutes: prev.minutes - 1, seconds: 59 };
+        } else {
+          // Reinicia o contador quando chega a zero
+          return { minutes: 8, seconds: 32 };
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -355,6 +377,21 @@ function App() {
 
             {/* Kit 3 */}
             <div className="bg-white rounded-lg shadow-lg p-4 md:p-8 border-2 border-orange-200 hover:shadow-xl transition-shadow">
+              {/* CONTADOR REGRESSIVO */}
+              <div className="bg-red-600 text-white text-center py-2 md:py-3 rounded-t-lg -mx-4 md:-mx-8 -mt-4 md:-mt-8 mb-4 md:mb-6">
+                <p className="text-xs md:text-sm font-bold mb-1">⚠️ OFERTA ESPECIAL ACABA EM:</p>
+                <div className="flex justify-center items-center gap-2">
+                  <div className="bg-black bg-opacity-30 px-2 md:px-3 py-1 rounded">
+                    <span className="text-lg md:text-2xl font-bold">{timeLeft.minutes.toString().padStart(2, '0')}</span>
+                  </div>
+                  <span className="text-lg md:text-2xl font-bold">:</span>
+                  <div className="bg-black bg-opacity-30 px-2 md:px-3 py-1 rounded">
+                    <span className="text-lg md:text-2xl font-bold">{timeLeft.seconds.toString().padStart(2, '0')}</span>
+                  </div>
+                </div>
+                <p className="text-xs md:text-sm mt-1">MINUTOS : SEGUNDOS</p>
+              </div>
+              
               <h3 className="text-xl md:text-2xl font-bold text-center mb-4 text-orange-800">COMPLETO</h3>
               <div className="text-center mb-6">
                 <img 
@@ -371,9 +408,12 @@ function App() {
                 </div>
                 <p className="text-orange-600 font-bold text-xs md:text-sm mt-2">+ FRETE GRÁTIS</p>
               </div>
-              <button className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-base md:text-lg transition-colors">
-                COMPRAR AGORA
+              <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-base md:text-lg transition-colors animate-pulse">
+                🔥 GARANTIR DESCONTO ANTES QUE ACABE
               </button>
+              <p className="text-center text-red-600 font-bold text-xs md:text-sm mt-2">
+                ⚠️ Apenas {Math.floor(Math.random() * 8) + 3} unidades restantes!
+              </p>
             </div>
           </div>
 
