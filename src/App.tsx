@@ -477,7 +477,7 @@ function App() {
                     <img 
                       src="https://i.imgur.com/PQfnT3P.jpeg" 
                       alt="5 Potes Articulazen" 
-                      className="w-32 h-32 md:w-48 md:h-48 mx-auto mb-4 rounded"
+                      className="w-48 md:w-64 mx-auto mb-4 rounded object-contain"
                     />
                     <p className="text-base md:text-lg text-orange-600 mb-2">5 Potes - Tratamento 5 Meses</p>
                     <p className="text-sm text-gray-500 line-through">De R$ 635</p>
