@@ -178,9 +178,9 @@ function App() {
         <section className="py-8 md:py-16 bg-orange-50">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-orange-800 leading-tight">
-              ASSISTA: Cientista Brasileiro Ignorado Pela Indústria Farmacêutica Revela Como Essa Raiz 
+              ASSISTA: Mulher de 67 Anos Revela Como Essa Raiz Dourada 
               <span className="text-orange-600 block md:inline"> DESLIGA A INFLAMAÇÃO </span>
-              do seu Corpo
+              e a Libertou das Dores em Apenas 17 Dias
             </h2>
             <div className="relative bg-black rounded-lg overflow-hidden mx-auto" style={{ maxWidth: '360px', aspectRatio: '9/16' }}>
               <video 
@@ -288,10 +288,6 @@ function App() {
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-white" />
                     <span className="text-base md:text-lg">100% natural, sem efeitos colaterais</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                    <span className="text-base md:text-lg">Aprovado pela ANVISA</span>
                   </div>
                 </div>
               </div>
