@@ -443,7 +443,7 @@ function App() {
                     <p className="text-orange-600 font-bold text-xs md:text-sm mt-2">+ FRETE GRÁTIS</p>
                   </div>
                   <button 
-                    onClick={() => handleCheckoutClick("https://LINK_CHECKOUT_COMBO_3_AQUI")}
+                    onClick={() => handleCheckoutClick("https://pay.kirvano.com/da6035a3-e8fc-42f2-adc9-03da00cda953")}
                     className="w-full bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-base md:text-lg transition-colors"
                   >
                     🚀 QUERO MINHA LIBERDADE DAS DORES!
@@ -484,7 +484,7 @@ function App() {
                     <p className="text-orange-600 font-bold text-xs md:text-sm mt-2">+ FRETE GRÁTIS</p>
                   </div>
                   <button 
-                    onClick={() => handleCheckoutClick("https://LINK_CHECKOUT_COMBO_5_AQUI")}
+                    onClick={() => handleCheckoutClick("https://pay.kirvano.com/5ae4aac0-c51e-4df0-b1c6-0b1157f18cae")}
                     className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-base md:text-lg transition-colors animate-pulse"
                   >
                     🔥 GARANTIR DESCONTO ANTES QUE ACABE
