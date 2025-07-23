@@ -178,9 +178,8 @@ function App() {
         <section className="py-8 md:py-16 bg-orange-50">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-orange-800 leading-tight">
-              ASSISTA: Mulher de 67 Anos Revela Como Essa Raiz Dourada 
-              <span className="text-orange-600 block md:inline"> DESLIGA A INFLAMAÇÃO </span>
-              e a Libertou das Dores em Apenas 17 Dias
+              Se você sente dor ao levantar,
+              <span className="text-orange-600 block md:inline"> eu gravei isso pensando em você.</span>
             </h2>
             <div className="relative bg-black rounded-lg overflow-hidden mx-auto" style={{ maxWidth: '360px', aspectRatio: '9/16' }}>
               <video 
